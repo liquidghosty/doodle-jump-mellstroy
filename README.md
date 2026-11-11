@@ -32,7 +32,8 @@
 
 ## Скачать
 
-- APK: [`dist/DudleJump_Mellstroy.apk`](dist/DudleJump_Mellstroy.apk) (Android 5.0+)
+- APK (603 КБ, Android 5.0+): [`dist/DudleJump_Mellstroy.apk`](dist/DudleJump_Mellstroy.apk)
+  — прямая ссылка: `https://raw.githubusercontent.com/liquidghosty/doodle-jump-mellstroy/main/dist/DudleJump_Mellstroy.apk`
 - Браузерная демка: [`dist/dudle_jump_demo.html`](dist/dudle_jump_demo.html)
 
 > Подпись — debug-ключ. Play Protect может предупредить, это нормально.
@@ -65,7 +66,7 @@ app/res/raw/                                    # музыка и звуки
 assets/                                          # генераторы ассетов (Python)
 dist/                                            # APK и демка
 scripts/build.sh                                 # сборка одной командой
-.github/workflows/build.yml                      # CI: APK на каждый push
+ci/build.yml                                     # CI-сборка APK (см. ниже)
 ```
 
 ## Лицензия
@@ -73,3 +74,24 @@ scripts/build.sh                                 # сборка одной ко�
 Код — **MIT** (см. [LICENSE](LICENSE)).
 ⚠️ Фото Меллстроя — фанатский мем-ассет из открытых источников, **не** под MIT.
 Для публикации/коммерческого использования нужны права на изображение и образ.
+
+
+---
+
+## CI (автосборка APK)
+
+Файл для GitHub Actions лежит в `ci/build.yml`, потому что он заливался
+токеном без scope `workflow`. Чтобы включить автосборку:
+
+1. Создай файл `.github/workflows/build.yml` в веб-интерфейсе GitHub
+   (**Add file → Create new file**, имя `.github/workflows/build.yml`)
+2. Скопируй туда содержимое `ci/build.yml`
+3. Commit — сборка запустится сама, APK появится в **Actions → артефакты**
+
+Если пушишь локально с токеном, у которого есть галочка `workflow` —
+можно просто:
+
+```bash
+mkdir -p .github/workflows && cp ci/build.yml .github/workflows/build.yml
+git add .github && git commit -m "ci: включить сборку APK" && git push
+```
