@@ -1,4 +1,6 @@
-# Дудл Джамп: Меллстрой 🟢
+# МЕЛЛДЖАМП 🟢
+
+*Doodle Jump × Меллстрой*
 
 Фанатская мобильная игра в стиле **Doodle Jump** — с фото Меллстроя в роли персонажа.
 Чистый Java + Android Canvas, **без внешних зависимостей**, собирается в APK одной командой.
@@ -32,8 +34,8 @@
 
 ## Скачать
 
-- APK (603 КБ, Android 5.0+): [`dist/DudleJump_Mellstroy.apk`](dist/DudleJump_Mellstroy.apk)
-  — прямая ссылка: `https://raw.githubusercontent.com/liquidghosty/doodle-jump-mellstroy/main/dist/DudleJump_Mellstroy.apk`
+- APK (603 КБ, Android 5.0+): [`dist/Melljump.apk`](dist/Melljump.apk)
+  — прямая ссылка: `https://raw.githubusercontent.com/liquidghosty/doodle-jump-mellstroy/main/dist/Melljump.apk`
 - Браузерная демка: [`dist/dudle_jump_demo.html`](dist/dudle_jump_demo.html)
 
 > Подпись — debug-ключ. Play Protect может предупредить, это нормально.
@@ -45,7 +47,7 @@
 ```bash
 export ANDROID_HOME=/путь/к/android-sdk
 bash scripts/build.sh
-# результат: dist/DudleJump_Mellstroy.apk
+# результат: dist/Melljump.apk
 ```
 
 Пересоздать ассеты:

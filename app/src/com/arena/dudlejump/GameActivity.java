@@ -73,7 +73,7 @@ public class GameActivity extends Activity {
     }
 
     // =====================================================================
-    //  ДУДЛ ДЖАМП: МЕЛЛСТРОЙ
+    //  МЕЛЛДЖАМП (Doodle Jump x Mellstroy)
     //  Настройки: управление (палец/наклон/кнопки), чувствительность,
     //  скорость, вибрация, звук, 4 фона. Рендер через View (без мерцания).
     // =====================================================================
@@ -1112,8 +1112,8 @@ public class GameActivity extends Activity {
             float cx = w / 2f;
             int inkCol = colorForBg();
 
-            drawLabel(c, "ДУДЛ ДЖАМП", cx, h * 0.115f, 88 * tx, inkCol);
-            drawLabel(c, "с МЕЛЛСТРОЕМ", cx, h * 0.168f, 44 * tx, bgIndex == 0 ? 0xFF3E7A2E : 0xFFB6F09A);
+            drawLabel(c, "МЕЛЛДЖАМП", cx, h * 0.115f, 92 * tx, inkCol);
+            drawLabel(c, "прыгай, да?", cx, h * 0.168f, 42 * tx, bgIndex == 0 ? 0xFF3E7A2E : 0xFFB6F09A);
 
             if (avatar != null) {
                 float size = 210 * tx;
@@ -1129,7 +1129,7 @@ public class GameActivity extends Activity {
                 ink.setStrokeWidth(3f * tx);
                 ink.setColor(inkCol);
                 c.drawRoundRect(card, 16, 16, ink);
-                drawLabel(c, "прыгай, да?", cx, card.bottom + 46 * tx, 32 * tx, inkCol);
+                drawLabel(c, "он не против", cx, card.bottom + 46 * tx, 30 * tx, inkCol);
             }
 
             drawLabel(c, "Рекорд: " + best + " м", cx, h * 0.845f, 34 * tx, inkCol);
