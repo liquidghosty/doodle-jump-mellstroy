@@ -1,0 +1,21 @@
+# сборка
+app/obj/
+app/dex/
+app/gen/
+app/out.apk
+app/aligned.apk
+*.idsig
+
+# ключи — никогда
+*.keystore
+*.jks
+*.p12
+
+# python / ide
+__pycache__/
+*.pyc
+.venv/
+.idea/
+*.iml
+.vscode/
+.DS_Store
